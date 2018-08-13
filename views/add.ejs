@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Gym App - Profil</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <style>
+    body {
+      padding-top: 80px;
+      word-wrap: break-word;
+    }
+    .container {
+      flex-direction: column;
+    }
+    table {
+      margin-top: 20px;
+    }
+    input {
+      background: #3d454c;
+      border: none;
+      width: 100%
+    }
+    .select {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container d-flex justify-content-center">
+
+    <form action="/add" method="post">
+
+      <div class="form-group">
+        <label for="dayName">Nazwa Dnia</label>
+        <input type="text" class="form-control" name="dayName">
+      </div>
+
+      <div>
+
+        <table class="table table-dark table-striped" id="table">
+
+
+          <thead>
+            <button type="button" class="add" style="float:right;">Dodaj Ćwiczenie</button>
+            <tr>
+              <th>
+                Numer:
+              </th>
+              <th>
+                Nazwa:
+              </th>
+              <th>
+                Serie:
+              </th>
+              <th>
+                Powtorzenia:
+              </th>
+              <th>
+                Przerwa:
+              </th>
+              <th>
+                Uwagi:
+              </th>
+            </tr>
+
+          </thead>
+
+          <tbody class="append1">
+
+          </tbody>
+
+        </table>
+
+        <button type="submit" class="btn btn-success btn-lg">Dodaj dzień</button>
+      </div>
+    </form>
+
+  </div>
+  <script>
+    var i = 1;
+
+
+
+    $('.add').on('click', function(e) {
+
+
+      var newTr = document.createElement('tr');
+      newTr.className = "excercise" + (i - 1);
+
+      var number = document.createElement('td');
+      var numberA = document.createElement('a');
+      numberA.name = "number" + (i - 1);
+      numberA.innerHTML = i;
+      i++
+
+      var name = document.createElement('td');
+      var nameInput = document.createElement('input');
+      nameInput.name = 'name' + (i - 1);
+
+
+      var series = document.createElement('td');
+      var seriesInput = document.createElement('input');
+      seriesInput.name = "series" + (i - 1);
+      seriesInput.type = "number";
+
+      var reps = document.createElement('td');
+      var repsInput = document.createElement('input');
+      repsInput.name = 'reps' + (i - 1);
+      repsInput.type = 'number';
+
+      var rest = document.createElement('td');
+      var restInput = document.createElement('input');
+      restInput.name = 'rest' + (i - 1);
+
+
+      var cautions = document.createElement('td');
+      var cautionsInput = document.createElement('input');
+      cautionsInput.name = 'cautions' + (i - 1);
+
+      $('.append1').append(newTr);
+      newTr.append(number);
+      number.append(numberA);
+      newTr.append(name);
+      name.append(nameInput);
+      newTr.append(series);
+      series.append(seriesInput);
+      newTr.append(reps);
+      reps.append(repsInput);
+      newTr.append(rest);
+      rest.append(restInput);
+      newTr.append(cautions);
+      cautions.append(cautionsInput);
+
+    });
+  </script>
+</body>
+
+</html>

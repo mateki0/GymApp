@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Gym App - Profil</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <style>
+    body {
+      padding-top: 80px;
+    }
+    .btn {
+      margin-top: 30px;
+    }
+    .container {
+      text-align: center;
+      white-space: normal
+    }
+    .row {
+      margin-top: 50px;
+      display: flex;
+      justify-content: center;
+    }
+    .daysToAdd,
+    .myDays {
+      border: 1px solid black;
+    }
+    .daysToAdd {
+      pointer-events: none;
+      display: block
+    }
+    .col-6 button {
+      margin: 5px 5px 0 0;
+    }
+    ul {
+      list-style: none;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <div class="container justify-content-center ">
+
+
+    <form method="post" action="/makePlan">
+      <h3>Wpisz nazwe planu</h3>
+      <input type="text" name="planName" id="planName" pattern="^[a-zA-Z]+$" placeholder="Tylko litery i cyfry" />
+      <div class="row">
+        <h4>Wybierz Treningi które chcesz dodać do planu</h4>
+
+
+
+        <div class=" col-6 myDays">
+          <ul>
+
+
+            <% for(var i=0; i<days.length ;i++){ %>
+              <li>
+                <button type="button" class="day" name="<%= days[i] %>"><%= days[i] %></button>
+              </li>
+              <% } %>
+          </ul>
+        </div>
+
+        <textarea type="text" class="col-6 daysToAdd" name="toAdd">
+
+      </textarea>
+
+
+      </div>
+      <button type="button" class="btn btn-danger clear">Wyczyść</button> <br />
+      <button type="submit" class="btn btn-success btn-lg">Dodaj plan</button>
+    </form>
+
+
+    <script>
+      var temp = [];
+      $('.myDays').on('click', '.day', function() {
+        var text = $(this).text();
+        temp.push(text)
+        console.log(temp)
+        $('.daysToAdd').text(temp);
+
+      })
+
+      $('.clear').on('click', function() {
+        $('.daysToAdd').text('Dodaj dni treningowe do planu');
+        temp = [];
+      })
+    </script>
+</body>
+
+</html>

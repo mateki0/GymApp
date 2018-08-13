@@ -1,0 +1,367 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Gym App - Profil</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <style>
+    body {
+      padding-top: 80px;
+      word-wrap: break-word;
+    }
+    .container {
+      flex-direction: column;
+
+    }
+    .table {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container d-flex justify-content-center">
+
+
+
+
+    <h2><%= dayName %></h2>
+    <table class="table table-dark table-striped">
+      <thead>
+        <tr>
+          <th>
+            Numer:
+          </th>
+          <th>
+            Nazwa:
+          </th>
+          <th>
+            Serie:
+          </th>
+          <th>
+            Powtorzenia:
+          </th>
+          <th>
+            Przerwa:
+          </th>
+          <th>
+            Uwagi:
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <% if(exercise1.name){ %>
+          <tr>
+
+            <td>
+              1
+            </td>
+
+            <td>
+
+              <%= exercise1.name %>
+            </td>
+
+            <td>
+              <%= exercise1.series %>
+            </td>
+
+            <td>
+              <%= exercise1.reps %>
+            </td>
+
+            <td>
+              <%= exercise1.rest %>
+            </td>
+
+            <td>
+              <%= exercise1.cautions %>
+            </td>
+
+          </tr>
+          <% } %>
+            <% if(exercise2.name){ %>
+              <tr>
+
+                <td>
+                  2
+                </td>
+
+                <td>
+
+                  <%= exercise2.name %>
+                </td>
+
+                <td>
+                  <%= exercise2.series %>
+                </td>
+
+                <td>
+                  <%= exercise2.reps %>
+                </td>
+
+                <td>
+                  <%= exercise2.rest %>
+                </td>
+
+                <td>
+                  <%= exercise2.cautions %>
+                </td>
+
+              </tr>
+              <% } %>
+                <% if(exercise3.name){ %>
+                  <tr>
+
+                    <td>
+                      3
+                    </td>
+
+                    <td>
+
+                      <%= exercise3.name %>
+                    </td>
+
+                    <td>
+                      <%= exercise3.series %>
+                    </td>
+
+                    <td>
+                      <%= exercise3.reps %>
+                    </td>
+
+                    <td>
+                      <%= exercise3.rest %>
+                    </td>
+
+                    <td>
+                      <%= exercise3.cautions %>
+                    </td>
+
+                  </tr>
+                  <% } %>
+                    <% if(exercise4.name){ %>
+                      <tr>
+
+                        <td>
+                          4
+                        </td>
+
+                        <td>
+
+                          <%= exercise4.name %>
+                        </td>
+
+                        <td>
+                          <%= exercise4.series %>
+                        </td>
+
+                        <td>
+                          <%= exercise4.reps %>
+                        </td>
+
+                        <td>
+                          <%= exercise4.rest %>
+                        </td>
+
+                        <td>
+                          <%= exercise4.cautions %>
+                        </td>
+
+                      </tr>
+                      <% } %>
+                        <% if(exercise5.name){ %>
+                          <tr>
+
+                            <td>
+                              5
+                            </td>
+
+                            <td>
+
+                              <%= exercise5.name %>
+                            </td>
+
+                            <td>
+                              <%= exercise5.series %>
+                            </td>
+
+                            <td>
+                              <%= exercise5.reps %>
+                            </td>
+
+                            <td>
+                              <%= exercise5.rest %>
+                            </td>
+
+                            <td>
+                              <%= exercise5.cautions %>
+                            </td>
+
+                          </tr>
+                          <% } %>
+                            <% if(exercise6.name){ %>
+                              <tr>
+
+                                <td>
+                                  6
+                                </td>
+
+                                <td>
+
+                                  <%= exercise6.name %>
+                                </td>
+
+                                <td>
+                                  <%= exercise6.series %>
+                                </td>
+
+                                <td>
+                                  <%= exercise6.reps %>
+                                </td>
+
+                                <td>
+                                  <%= exercise6.rest %>
+                                </td>
+
+                                <td>
+                                  <%= exercise6.cautions %>
+                                </td>
+
+                              </tr>
+                              <% } %>
+                                <% if(exercise7.name){ %>
+                                  <tr>
+
+                                    <td>
+                                      7
+                                    </td>
+
+                                    <td>
+
+                                      <%= exercise7.name %>
+                                    </td>
+
+                                    <td>
+                                      <%= exercise7.series %>
+                                    </td>
+
+                                    <td>
+                                      <%= exercise7.reps %>
+                                    </td>
+
+                                    <td>
+                                      <%= exercise7.rest %>
+                                    </td>
+
+                                    <td>
+                                      <%= exercise7.cautions %>
+                                    </td>
+
+                                  </tr>
+                                  <% } %>
+                                    <% if(exercise8.name){ %>
+                                      <tr>
+
+                                        <td>
+                                          8
+                                        </td>
+
+                                        <td>
+
+                                          <%= exercise8.name %>
+                                        </td>
+
+                                        <td>
+                                          <%= exercise8.series %>
+                                        </td>
+
+                                        <td>
+                                          <%= exercise8.reps %>
+                                        </td>
+
+                                        <td>
+                                          <%= exercise8.rest %>
+                                        </td>
+
+                                        <td>
+                                          <%= exercise8.cautions %>
+                                        </td>
+
+                                      </tr>
+                                      <% } %>
+                                        <% if(exercise9.name){ %>
+                                          <tr>
+
+                                            <td>
+                                              9
+                                            </td>
+
+                                            <td>
+
+                                              <%= exercise9.name %>
+                                            </td>
+
+                                            <td>
+                                              <%= exercise9.series %>
+                                            </td>
+
+                                            <td>
+                                              <%= exercise9.reps %>
+                                            </td>
+
+                                            <td>
+                                              <%= exercise9.rest %>
+                                            </td>
+
+                                            <td>
+                                              <%= exercise9.cautions %>
+                                            </td>
+
+                                          </tr>
+                                          <% } %>
+                                            <% if(exercise10.name){ %>
+                                              <tr>
+
+                                                <td>
+                                                  10
+                                                </td>
+
+                                                <td>
+
+                                                  <%= exercise10.name %>
+                                                </td>
+
+                                                <td>
+                                                  <%= exercise10.series %>
+                                                </td>
+
+                                                <td>
+                                                  <%= exercise10.reps %>
+                                                </td>
+
+                                                <td>
+                                                  <%= exercise10.rest %>
+                                                </td>
+
+
+
+                                                <td>
+                                                  <%= exercise10.cautions %>
+                                                </td>
+
+                                              </tr>
+                                              <% } %>
+      </tbody>
+    </table>
+    <p>
+      <a href='/profile'>Mój profil</a>
+    </p>
+
+  </div>
+
+</body>
+
+</html>

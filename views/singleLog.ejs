@@ -1,0 +1,302 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Gym App - Profil</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <style>
+    body {
+      padding-top: 80px;
+      word-wrap: break-word;
+    }
+    .container {
+      flex-direction: column;
+    }
+    .table {
+      text-align: center;
+    }
+    hr {
+      border-top: 1px solid black;
+      width: 100%
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container d-flex justify-content-center">
+
+      <table class="table table-dark table-striped text-center">
+        <thead>
+          <tr>
+            <th>
+              Numer:
+            </th>
+            <th>
+              Nazwa:
+            </th>
+            <th>
+              Serie:
+            </th>
+            <th>
+              Powtorzenia:
+            </th>
+            <th>
+              Rpe:
+            </th>
+            <th>
+              Cieżar:
+            </th>
+          </tr>
+        </thead>
+        <tbody id="append">
+
+
+
+
+          <% if (log.exercise0.name) { %>
+          <tr>
+            <td>
+              1
+            </td>
+            <td>
+              <%= log.exercise0.name %>
+
+            </td>
+            <td>
+              <%= log.exercise0.series %>
+            </td>
+            <td>
+              <%= log.exercise0.reps %>
+            </td>
+            <td>
+              <%= log.exercise0.rpe %>
+            </td>
+            <td>
+              <%= log.exercise0.weight %>
+            </td>
+          </tr>
+          <% } %>
+          <% if (log.exercise1.name) { %>
+          <tr>
+            <td>
+              2
+            </td>
+            <td>
+              <%= log.exercise1.name %>
+
+            </td>
+            <td>
+              <%= log.exercise1.series %>
+            </td>
+            <td>
+              <%= log.exercise1.reps %>
+            </td>
+            <td>
+              <%= log.exercise1.rpe %>
+            </td>
+            <td>
+              <%= log.exercise1.weight %>
+            </td>
+          </tr>
+          <% } %>
+          <% if (log.exercise2.name) { %>
+          <tr>
+            <td>
+              3
+            </td>
+            <td>
+              <%= log.exercise2.name %>
+
+            </td>
+            <td>
+              <%= log.exercise2.series %>
+            </td>
+            <td>
+              <%= log.exercise2.reps %>
+            </td>
+            <td>
+              <%= log.exercise2.rpe %>
+            </td>
+            <td>
+              <%= log.exercise2.weight %>
+            </td>
+          </tr>
+          <% } %>
+          <% if (log.exercise3.name) { %>
+          <tr>
+            <td>
+              4
+            </td>
+            <td>
+              <%= log.exercise3.name %>
+
+            </td>
+            <td>
+              <%= log.exercise3.series %>
+            </td>
+            <td>
+              <%= log.exercise3.reps %>
+            </td>
+            <td>
+              <%= log.exercise3.rpe %>
+            </td>
+            <td>
+              <%= log.exercise3.weight %>
+            </td>
+          </tr>
+          <% } %>
+          <% if (log.exercise4.name) { %>
+          <tr>
+            <td>
+              5
+            </td>
+            <td>
+              <%= log.exercise4.name %>
+
+            </td>
+            <td>
+              <%= log.exercise4.series %>
+            </td>
+            <td>
+              <%= log.exercise4.reps %>
+            </td>
+            <td>
+              <%= log.exercise4.rpe %>
+            </td>
+            <td>
+              <%= log.exercise4.weight %>
+            </td>
+          </tr>
+          <% } %>
+          <% if (log.exercise5.name) { %>
+          <tr>
+            <td>
+              6
+            </td>
+            <td>
+              <%= log.exercise5.name %>
+
+            </td>
+            <td>
+              <%= log.exercise5.series %>
+            </td>
+            <td>
+              <%= log.exercise5.reps %>
+            </td>
+            <td>
+              <%= log.exercise5.rpe %>
+            </td>
+            <td>
+              <%= log.exercise5.weight %>
+            </td>
+          </tr>
+          <% } %>
+          <% if (log.exercise6.name) { %>
+          <tr>
+            <td>
+              7
+            </td>
+            <td>
+              <%= log.exercise6.name %>
+
+            </td>
+            <td>
+              <%= log.exercise6.series %>
+            </td>
+            <td>
+              <%= log.exercise6.reps %>
+            </td>
+            <td>
+              <%= log.exercise6.rpe %>
+            </td>
+            <td>
+              <%= log.exercise6.weight %>
+            </td>
+          </tr>
+          <% } %>
+          <% if (log.exercise7.name) { %>
+          <tr>
+            <td>
+              8
+            </td>
+            <td>
+              <%= log.exercise7.name %>
+
+            </td>
+            <td>
+              <%= log.exercise7.series %>
+            </td>
+            <td>
+              <%= log.exercise7.reps %>
+            </td>
+            <td>
+              <%= log.exercise7.rpe %>
+            </td>
+            <td>
+              <%= log.exercise7.weight %>
+            </td>
+          </tr>
+          <% } %>
+          <% if (log.exercise8.name) { %>
+          <tr>
+            <td>
+              9
+            </td>
+            <td>
+              <%= log.exercise8.name %>
+
+            </td>
+            <td>
+              <%= log.exercise8.series %>
+            </td>
+            <td>
+              <%= log.exercise8.reps %>
+            </td>
+            <td>
+              <%= log.exercise8.rpe %>
+            </td>
+            <td>
+              <%= log.exercise8.weight %>
+            </td>
+          </tr>
+          <% } %>
+          <% if (log.exercise9.name) { %>
+          <tr>
+            <td>
+              10
+            </td>
+            <td>
+              <%= log.exercise9.name %>
+
+            </td>
+            <td>
+              <%= log.exercise9.series %>
+            </td>
+            <td>
+              <%= log.exercise9.reps %>
+            </td>
+            <td>
+              <%= log.exercise9.rpe %>
+            </td>
+            <td>
+              <%= log.exercise9.weight %>
+            </td>
+          </tr>
+            <% } %>
+
+
+
+
+        </tbody>
+      </table>
+      <p>
+        <a href='/profile'>Mój profil</a>
+      </p>
+  </div>
+
+  <script>
+
+  </script>
+</body>
+
+</html>

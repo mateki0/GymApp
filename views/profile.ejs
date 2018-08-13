@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Gym App - Profil</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <style>
+    body {
+      padding-top: 80px;
+      word-wrap: break-word;
+    }
+    .container {
+      flex-direction: column;
+    }
+    .table {
+      text-align: center;
+    }
+    hr {
+      border-top: 1px solid black;
+      width: 100%
+    }
+    .forms {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: auto
+    }
+    #secondForm,
+    #firstForm {
+      margin-top: 30px
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container d-flex justify-content-center">
+
+    <h1 class="text-center"><%= user.local.email %></h1>
+
+
+
+    <table class="table table-dark table-striped">
+      <thead>
+        <tr>
+          <th>
+            Moje plany:
+          </th>
+
+        </tr>
+      </thead>
+      <tbody>
+
+
+        <% for(var i=0; i<plans.length; i++){ %>
+          <tr>
+            <td>
+              <a href="plan/<%= plans[i] %>">
+                <%= plans[i] %>
+              </a>
+            </td>
+          </tr>
+          <% } %>
+
+
+
+      </tbody>
+    </table>
+    <p>
+      <a href='/add'>Dodaj dzień treningowy</a> lub
+
+      <a href="/makePlan">Ułóż plan z istniejących treningów</a>
+    </p>
+    <hr />
+
+    <div class="forms">
+      <p>
+        Dodaj wpis do dziennika treningowego
+      </p>
+
+      <form action="/addLog" method="get" id="firstForm">
+        <select name="dayPick">
+  <option>
+    Wybierz dzień
+  </option>
+  <% for(var i=0; i<days.length; i++){ %>
+  <option>  <%= days[i] %> </option>
+  <% } %>
+  </select>
+        <button class="btn btn-success">Dodaj</button>
+      </form>
+      <hr />
+      <p>
+        Zobacz swój dziennik treningowy
+      </p>
+      <form action="/logs" method="get" id="secondForm">
+        <select name="chooseDay">
+
+        <option>
+          Wybierz dzień
+        </option>
+        <% for(var i=0; i<days.length; i++){ %>
+        <option>  <%= days[i] %> </option>
+        <% } %>
+        </select>
+
+        </select>
+        <button class="btn btn-success ">Wybierz</button>
+      </form>
+    </div>
+    <hr />
+    <p>
+      <a href="/logout">Wyloguj się</a>
+    </p>
+  </div>
+
+</body>
+
+</html>

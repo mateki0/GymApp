@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Gym App - Profil</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <style>
+    body {
+      padding-top: 80px;
+      word-wrap: break-word;
+    }
+    .container {
+      flex-direction: column;
+    }
+    .table {
+      text-align: center;
+    }
+    hr {
+      border-top: 1px solid black;
+      width: 100%
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container d-flex justify-content-center">
+
+    <h1 class="text-center"></h1>
+
+
+
+
+    <br/>
+
+
+    <%= day %>
+      <table class="table table-dark table-striped">
+        <thead>
+          <tr>
+            <th>
+              Treningi:
+            </th>
+            <th>
+              Data:
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <% for(var i=0; i<logs.length; i++){%>
+            <tr>
+              <td>
+                <%= i+1 %>.<a href="/logs/<%=logs[i]._id %>">Zobacz</a>
+              </td>
+              <td>
+                <%= logs[i].date %>
+                  </a>
+
+              </td>
+
+            </tr>
+            <% } %>
+        </tbody>
+      </table>
+
+  </div>
+
+</body>
+
+</html>
